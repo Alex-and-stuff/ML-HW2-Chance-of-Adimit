@@ -25,9 +25,10 @@ def MLR(train_data, test_data_feature, O1=5, O2=5):  # remember to set best choi
     '''
     output: ndarray with size (length of test_data, )
     '''
+    cvt_train_data = BasisFunc(train_data, O1, O2)
 
 
-    return y_MLLSprediction 
+    return y_MLRprediction 
 
 
 def CalMSE(data, prediction):
@@ -63,7 +64,8 @@ def BasisFunc(data, O_1, O_2):
                 output[row][k-1] = phi_k
         output[row][k+1-1] = x3[row]
         output[row][k+2-1] = 1
-    print(output[:,26])
+    
+    return output
 
 
     
