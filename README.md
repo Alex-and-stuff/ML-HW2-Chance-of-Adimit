@@ -4,6 +4,22 @@
 
 11020EE655000 Machine Learning homework 2 using Maximum Likelihood (ML) and Bayesian linear regression methods to train a linear model in order to predict the chance of being admitted to graduate admissions
 
+## Basis function
+
+Feature vector given as:
+$$
+\phi(x) = [\phi_1(x),\phi_2(x),......\phi_P(x),\phi_{P+1}(x),\phi_{P+2}(x)]^T
+$$
+Where:  
+
+- $\phi_{P+1}(x) = x_3 (Research Experience)$
+- $\phi_{P+2}(x) = 1   (Bias)$
+
+Gaussian basis function defined as follow:
+$$
+\phi_k(x)=\exp(-\frac{(x_1-\mu_i)^2}{2s_1^2}-\frac{(x_2-\mu_j)^2}{2s_2^2})
+$$
+
 ## References
 
 1. <https://medium.com/jackys-blog/bayesian-linear-regression-in-python-%E8%B2%9D%E8%91%89%E6%96%AF%E7%B7%9A%E6%80%A7%E8%BF%B4%E6%AD%B8-%E4%B8%8A%E9%9B%86-a0be91a55ffe>
