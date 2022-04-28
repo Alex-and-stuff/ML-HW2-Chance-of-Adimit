@@ -65,8 +65,7 @@ def MLR(train_data, test_data_feature, O1=5, O2=5):  # remember to set best choi
         for j in range(cvt_test_data.shape[1]):
             y+=w_ml[j]*cvt_test_data[data,j]
         y_MLRprediction.append(y)
-
-    # print(y_MLRprediction)
+        
     return y_MLRprediction 
 
 
@@ -100,8 +99,7 @@ def BasisFunc(data, O_1, O_2):
     # Create output matrix
     output = np.zeros((data_row, O_1*O_2+2))
 
-    # k Goes from 1-25, 
-    # expands the data from 2+experience+bias to 25+experience+bias
+    # k Goes from 1-25, expands the data from 2+experience+bias to 25+experience+bias
     for row in range(data_row):
         for i in range(1,O_1+1,1):
             for j in range(1,O_2+1,1):
@@ -112,7 +110,6 @@ def BasisFunc(data, O_1, O_2):
                 output[row][k-1] = phi_k
         output[row][k+1-1] = x3[row]
         output[row][k+2-1] = 1
-    # print(output, output.shape)
     return output
 
 def Normalize(data, max, min):
